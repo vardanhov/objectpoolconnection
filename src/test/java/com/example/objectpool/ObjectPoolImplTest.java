@@ -19,15 +19,15 @@ public class ObjectPoolImplTest {
 
     private static final UserService userService = new UserServiceImpl();
 
-//    @BeforeClass
-//    public static void beforeClazz() {
-//        userService.deleteAll();
-//    }
-//
-//    @AfterClass
-//    public static void afterClazz() {
-//        userService.deleteAll();
-//    }
+    @BeforeClass
+    public static void beforeClazz() {
+        userService.deleteAll();
+    }
+
+    @AfterClass
+    public static void afterClazz() {
+        userService.deleteAll();
+    }
 
     @Test
     public void testCreateWithExistingEmail() {

@@ -62,13 +62,10 @@ public class UserServiceImpl implements UserService {
             preparedStatement.executeUpdate();
 
             final User user = new User();
-
             user.setId(newId);
             user.setEmail(createUserRequest.getEmail());
-
             user.setFirstName(createUserRequest.getFirstName());
             user.setLastName(createUserRequest.getLastName());
-
             user.setCreated(currentDate);
 
             return user;
